@@ -2,8 +2,12 @@ class BinaryTreeNode():
     def __init__(self, value):
         self._left = None
         self._right = None
-        self.value = value
+        self._value = value
         self.parent = None
+
+    @property
+    def value(self):
+        return self._value
 
     @property
     def right(self):

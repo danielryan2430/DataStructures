@@ -1,19 +1,23 @@
-class LinkedListNode():
+class LinkedListNode(object):
     def __init__(self, value):
         self._next = None
         self._value = value
-
 
     @property
     def value(self):
         return self._value
 
+    @value.setter
+    def value(self,value):
+        self._value = value
+
     @property
     def next(self):
         return self._next
 
-    def set_next(self, next):
-        self._next = next
+    @next.setter
+    def next(self, value):
+        self._next = value
 
 
 class LinkedList(object):
@@ -33,7 +37,7 @@ class LinkedList(object):
             self._head = node
             self._last = node
         else:
-            self._last.set_next(node)
+            self._last.next = node
             self._last = node
 
     def lookup(self, value):
@@ -49,7 +53,6 @@ class LinkedList(object):
         current = self._head
         while current:
             if current.value == value:
-                print "found value"
                 break
             prev = current
             current = current.next

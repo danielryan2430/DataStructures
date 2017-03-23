@@ -4,7 +4,6 @@
     <list default="true" id="b157abfe-8aae-4d2f-ac96-6e05d716ebe5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cap1/binary_tree.py" afterPath="$PROJECT_DIR$/cap1/binary_tree.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cap1/linked_list.py" afterPath="$PROJECT_DIR$/cap1/linked_list.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/linked_list_test.py" afterPath="$PROJECT_DIR$/test/linked_list_test.py" />
     </list>
     <ignored path="DataStructures.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,7 +38,7 @@
         <entry file="file://$PROJECT_DIR$/cap1/linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -49,7 +48,7 @@
         <entry file="file://$PROJECT_DIR$/cap1/binary_tree.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -68,8 +67,8 @@
       <file leaf-file-name="linked_list_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/linked_list_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7307002">
-              <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.40394974">
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -232,29 +231,7 @@
   <component name="PropertiesComponent">
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in linked_list_test">
-    <configuration default="false" name="Unittests in TestHashTableWithChaining" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataStructures" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/hash_table_test.py" />
-      <option name="CLASS_NAME" value="TestHashTableWithChaining" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_CLASS" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittest TestLinkedList.test_delete">
     <configuration default="false" name="Unittests in test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -336,6 +313,28 @@
       <option name="METHOD_NAME" value="" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestLinkedList.test_delete" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataStructures" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/linked_list_test.py" />
+      <option name="CLASS_NAME" value="TestLinkedList" />
+      <option name="METHOD_NAME" value="test_delete" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
       <option name="PUREUNITTEST" value="true" />
@@ -466,19 +465,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestHashTableWithChaining" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in test" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in binary_tree_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in linked_list_test" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in hash_table_test" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in binary_tree_test" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in linked_list_test" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in hash_table_test" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_delete" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in linked_list_test" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in hash_table_test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_delete" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in linked_list_test" />
         <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in binary_tree_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in test" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in TestHashTableWithChaining" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in hash_table_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test" />
       </list>
     </recent_temporary>
   </component>
@@ -493,35 +492,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 27m 17s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 28m 49s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 27m 53s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 30m 07s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 28m 04s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 30m 20s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 28m 48s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 32m 12s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 30m 04s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 32m 29s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 30m 31s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 32m 41s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 30m 46s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 32m 56s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 31m 03s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 33m 03s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 31m 13s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 33m 16s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_linked_list_test - 2017.03.23 at 13h 31m 30s.xml">
-      <configuration name="Unittests in linked_list_test" configurationId="tests" />
+    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 33m 49s.xml">
+      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -537,7 +536,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -551,7 +550,20 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/cap1/linked_list.py</url>
+          <line>39</line>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="python-line">
+          <url>file://$PROJECT_DIR$/cap1/linked_list.py</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="2" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
@@ -613,36 +625,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cap1/array.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cap1/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/binary_tree_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33213645">
-          <caret line="509" column="8" selection-start-line="509" selection-start-column="8" selection-end-line="509" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -673,10 +659,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cap1/binary_tree.py">
+    <entry file="file://$PROJECT_DIR$/test/binary_tree_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cap1/array.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3326226">
+          <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -684,15 +688,23 @@
     <entry file="file://$PROJECT_DIR$/cap1/linked_list.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cap1/binary_tree.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/linked_list_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7307002">
-          <caret line="28" column="37" selection-start-line="28" selection-start-column="37" selection-end-line="28" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.40394974">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
