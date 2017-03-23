@@ -1,8 +1,8 @@
 class LinkedListNode():
     def __init__(self, value):
         self.next = None
-        self.value = value \
- \
+        self.value = value
+
     def set_next(self, next):
         self.next = next
 
