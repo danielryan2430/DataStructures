@@ -101,8 +101,7 @@ class BinarySearchTree():
     :arguments
         - value (Any)
     :returns
-        -
-
+        - None
     used to delete a node in the binary tree
     '''
     def delete(self, value):
