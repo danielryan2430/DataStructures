@@ -19,3 +19,11 @@ class HashTable():
             if key == found_key:
                 return data
         return None
+
+    def delete(self,key):
+        hash_key = self._hash(key)
+        ans = self.data[hash_key]
+        if ans:
+            [found_key, _] = ans
+            if key == found_key:
+                self.data[hash_key] = []

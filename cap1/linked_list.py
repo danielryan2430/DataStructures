@@ -1,16 +1,22 @@
 class LinkedListNode():
     def __init__(self, value):
         self.next = None
-        self.value = value\
-
+        self.value = value \
+ \
     def set_next(self, next):
         self.next = next
 
 
-class LinkedList():
+class LinkedList(object):
     def __init__(self):
         self.head = None
         self.last = None
+
+    def printAll(self):
+        curr = self.head
+        while curr:
+            print curr.value
+            curr = curr.next
 
     def insert(self, value):
         node = LinkedListNode(value)
@@ -21,7 +27,7 @@ class LinkedList():
             self.last.next = node
             self.last = node
 
-    def lookup(self,value):
+    def lookup(self, value):
         current = self.head
         while current:
             if current.value == value:
@@ -30,18 +36,16 @@ class LinkedList():
         return None
 
     def delete(self, value):
+        prev = None
         current = self.head
         while current:
             if current.value == value:
-                self._remove_node(current)
+                print "found value"
                 break
             current = current.next
 
-    def _remove_node(self,node):
-        if node.next:
-            node.value = node.next.value
-            n = node.next
-            node.next = node.next.next
-            del n
+        # if there is no previous, then we're at the head of the list
+        if prev:
+            prev.next = current.next
         else:
-            del node
+            self.head = current.next

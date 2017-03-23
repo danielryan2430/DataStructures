@@ -1,9 +1,25 @@
 class BinaryTreeNode():
     def __init__(self, value):
-        self.left = None
-        self.right = None
+        self._left = None
+        self._right = None
         self.value = value
         self.parent = None
+
+    @property
+    def right(self):
+        return self._right
+
+    @right.setter
+    def right(self, value):
+        self._right = value
+
+    @property
+    def left(self):
+        return self._left
+
+    @left.setter
+    def left(self, value):
+        self._left = value
 
 
 def _remove_from_parent(node):
@@ -18,6 +34,15 @@ class BinarySearchTree():
     def __init__(self):
         self.root = None
 
+    '''
+    _insert:
+    :arguments
+        - value (String)
+    :returns
+        - None
+
+    inserts value into BST, duplicates will be discarded
+    '''
     def insert(self, value):
         if not self.root:
             self.root = BinaryTreeNode(value)
@@ -54,7 +79,7 @@ class BinarySearchTree():
     _lookup:
     :arguments
         - node (BinaryTreeNode)
-        - value (Integer)
+        - value (Any)
     :returns
         - BinaryTreeNode
 
@@ -71,6 +96,15 @@ class BinarySearchTree():
         else:
             return node
 
+    '''
+    delete:
+    :arguments
+        - value (Any)
+    :returns
+        -
+
+    used to delete a node in the binary tree
+    '''
     def delete(self, value):
         node_to_delete = self.lookup(value)
         if node_to_delete.left and node_to_delete.right:
