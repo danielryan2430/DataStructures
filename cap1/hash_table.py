@@ -9,6 +9,7 @@ class HashTable(object):
     def insert(self, value):
         hash_key = self._hash(value)
         self._data[hash_key] = value
+        return 1
 
     def lookup(self, key):
         hash_key = self._hash(key)
