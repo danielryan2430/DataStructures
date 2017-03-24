@@ -1,5 +1,6 @@
 from data_structure import DataStructureBase
 
+
 class BinaryTreeNode(object):
     def __init__(self, value):
         self._left = None
@@ -122,6 +123,15 @@ class BSTStepCounter(DataStructureBase):
     def delete(self, value):
         return self._delete(value, self.root, 1)
 
+    '''
+    _delete:
+    :arguments
+        - value (Any)
+    :returns
+        - int (num steps to delete)
+    used to delete a node in the binary tree
+    '''
+
     def _delete(self, value, node, count):
         if not node:
             return -1
@@ -132,6 +142,15 @@ class BSTStepCounter(DataStructureBase):
         else:
             return self._delete_node(node, count)
 
+    '''
+    _delete_node:
+    :arguments
+        - node_to_delete (BinaryTreeNode)
+        - count (int)
+    :returns
+        - int (num steps to delete)
+    used to delete a node in the binary tree
+    '''
     def _delete_node(self, node_to_delete, count):
         c = count
         if node_to_delete.left and node_to_delete.right:
@@ -150,13 +169,14 @@ class BSTStepCounter(DataStructureBase):
         node_to_delete.value = successor.value
         del successor
         return c
+
     '''
     _find_min:
     :arguments
         - node (BinaryTreeNode)
     :returns
+        - node (
         - int (num steps to find min)
-
     used to find successor in delete function
     '''
 

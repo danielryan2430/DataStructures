@@ -6,21 +6,21 @@ from cap1.hash_table_chaining import HashTableChainingStepCounter
 class TestHashTable(unittest.TestCase):
     def test_insert(self):
         ht = HashTable()
-        ht.insert("5", "hello")
-        self.assertEqual(ht.lookup("5"), "hello")
-        self.assertEqual(ht.lookup(4), None)
+        ht.insert("5")
+        self.assertEqual(ht.lookup("5"),1)
+        self.assertEqual(ht.lookup(4), -1)
 
     def test_delete(self):
         ht = HashTable()
-        ht.insert("5", "hello")
-        ht.insert("4", "goodbye")
+        ht.insert("5")
+        ht.insert("4")
 
-        self.assertEqual(ht.lookup("4"), "goodbye")
+        self.assertEqual(ht.lookup("4"), 1)
 
         ht.delete("4")
 
-        self.assertEqual(ht.lookup("5"), "hello")
-        self.assertEqual(ht.lookup("4"), None)
+        self.assertEqual(ht.lookup("5"), 1)
+        self.assertEqual(ht.lookup("4"), -1)
 
 
 class TestHashTableWithChaining(unittest.TestCase):

@@ -9,16 +9,24 @@ This hashtable h
 
 class HashTableChainingStepCounter(DataStructureBase):
     def __init__(self, capacity=1001):
-        self.capacity = capacity
-        self.size = 0
-        self.data = [LinkedListStepCounter() for _ in range(capacity)]
+        self._capacity = capacity
+        self._size = 0
+        self._data = [LinkedListStepCounter() for _ in range(capacity)]
+
+    @property
+    def data(self):
+        return self._data
+
+    @data.setter
+    def data(self, value):
+        self._data = value
 
     '''
-    In order to make chaining significantly more likely, this table's hashing function is purposely high on collisions
+        In order to make chaining significantly more likely, this table's hashing function is purposely high on collisions
     '''
 
     def _hash(self, key):
-        return sum(bytearray(key)) % self.capacity
+        return sum(bytearray(key)) % self._capacity
 
     def insert(self, value):
         hash_key = self._hash(value)
@@ -32,7 +40,7 @@ class HashTableChainingStepCounter(DataStructureBase):
         else:
             return -1
 
-    def delete(self,key):
+    def delete(self, key):
         hash_key = self._hash(key)
         chain_steps = self.data[hash_key].delete(key)
         if chain_steps != -1:
