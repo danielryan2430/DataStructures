@@ -9,6 +9,11 @@ class BinaryTreeNode(object):
     def value(self):
         return self._value
 
+    @value.setter
+    def value(self,value):
+        self._value = value
+
+
     @property
     def right(self):
         return self._right
@@ -50,8 +55,9 @@ class BinarySearchTree(object):
     def insert(self, value):
         if not self.root:
             self.root = BinaryTreeNode(value)
+            return 1
         else:
-            self._insert(self.root, BinaryTreeNode(value))
+            return self._insert(self.root, BinaryTreeNode(value),2)
 
     '''
     _insert:
@@ -62,19 +68,21 @@ class BinarySearchTree(object):
         - None
     '''
 
-    def _insert(self, node, node_to_insert):
+    def _insert(self, node, node_to_insert, count_so_far):
         if node_to_insert.value < node.value:
             if node.left:
-                self._insert(node.left, node_to_insert)
+                return self._insert(node.left, node_to_insert, count_so_far + 1)
             else:
                 node.left = node_to_insert
                 node_to_insert.parent = node.left
+                return count_so_far
         elif node_to_insert.value > node.value:
             if node.right:
-                self._insert(node.right, node_to_insert)
+                return self._insert(node.right, node_to_insert, count_so_far + 1)
             else:
                 node.right = node_to_insert
                 node_to_insert.parent = node.right
+                return count_so_far
 
     def lookup(self, value):
         return self._lookup(self.root, value)
