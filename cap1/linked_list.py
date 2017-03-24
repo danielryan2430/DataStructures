@@ -25,7 +25,7 @@ class LinkedList(object):
         self._head = None
         self._last = None
 
-    def printAll(self):
+    def print_all(self):
         curr = self._head
         while curr:
             print curr.value
