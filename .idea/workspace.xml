@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b157abfe-8aae-4d2f-ac96-6e05d716ebe5" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cap1/binary_tree.py" afterPath="$PROJECT_DIR$/cap1/binary_tree.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cap1/hash_table.py" afterPath="$PROJECT_DIR$/cap1/hash_table.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cap1/hash_table_chaining.py" afterPath="$PROJECT_DIR$/cap1/hash_table_chaining.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/linked_list_test.py" afterPath="$PROJECT_DIR$/test/linked_list_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/binary_tree_test.py" afterPath="$PROJECT_DIR$/test/binary_tree_test.py" />
     </list>
     <ignored path="DataStructures.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="linked_list.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="linked_list.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/cap1/linked_list.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83482945">
-              <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -50,7 +49,7 @@
         <entry file="file://$PROJECT_DIR$/cap1/binary_tree.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+              <caret line="122" column="42" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -70,7 +69,7 @@
         <entry file="file://$PROJECT_DIR$/test/linked_list_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
+              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -88,16 +87,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hash_table_chaining.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cap1/hash_table_chaining.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="hash_table_test.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/hash_table_test.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -110,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="binary_tree_test.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="binary_tree_test.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test/binary_tree_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.75763017">
+              <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -141,13 +130,13 @@
         <option value="$PROJECT_DIR$/cap1/array.py" />
         <option value="$PROJECT_DIR$/cap1/foo.py" />
         <option value="$PROJECT_DIR$/cap1/__init__.py" />
-        <option value="$PROJECT_DIR$/test/binary_tree_test.py" />
         <option value="$PROJECT_DIR$/test/hash_table_test.py" />
-        <option value="$PROJECT_DIR$/cap1/linked_list.py" />
-        <option value="$PROJECT_DIR$/test/linked_list_test.py" />
-        <option value="$PROJECT_DIR$/cap1/binary_tree.py" />
         <option value="$PROJECT_DIR$/cap1/hash_table.py" />
         <option value="$PROJECT_DIR$/cap1/hash_table_chaining.py" />
+        <option value="$PROJECT_DIR$/cap1/linked_list.py" />
+        <option value="$PROJECT_DIR$/test/linked_list_test.py" />
+        <option value="$PROJECT_DIR$/test/binary_tree_test.py" />
+        <option value="$PROJECT_DIR$/cap1/binary_tree.py" />
       </list>
     </option>
   </component>
@@ -207,6 +196,16 @@
               <option name="myItemId" value="DataStructures" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="DataStructures" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -233,95 +232,7 @@
   <component name="PropertiesComponent">
     <property name="FullScreen" value="true" />
   </component>
-  <component name="RunManager" selected="Python tests.Unittest TestLinkedList.test_delete">
-    <configuration default="false" name="Unittests in test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataStructures" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="$PROJECT_DIR$/test" />
-      <option name="TEST_TYPE" value="TEST_FOLDER" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in binary_tree_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataStructures" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/binary_tree_test.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in linked_list_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataStructures" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/linked_list_test.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
-    <configuration default="false" name="Unittests in hash_table_test" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="DataStructures" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/hash_table_test.py" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python tests.Unittests in TestBinarySearchTree">
     <configuration default="false" name="Unittest TestLinkedList.test_delete" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -335,6 +246,94 @@
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/linked_list_test.py" />
       <option name="CLASS_NAME" value="TestLinkedList" />
       <option name="METHOD_NAME" value="test_delete" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestLinkedList.test_insert" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataStructures" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/linked_list_test.py" />
+      <option name="CLASS_NAME" value="TestLinkedList" />
+      <option name="METHOD_NAME" value="test_insert" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestLinkedList.test_delete_mid" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataStructures" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/linked_list_test.py" />
+      <option name="CLASS_NAME" value="TestLinkedList" />
+      <option name="METHOD_NAME" value="test_delete_mid" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_METHOD" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittests in TestBinarySearchTree" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataStructures" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/binary_tree_test.py" />
+      <option name="CLASS_NAME" value="TestBinarySearchTree" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_CLASS" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Unittest TestBinarySearchTree.test_multi_insert_count" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="DataStructures" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/binary_tree_test.py" />
+      <option name="CLASS_NAME" value="TestBinarySearchTree" />
+      <option name="METHOD_NAME" value="test_multi_insert_count" />
       <option name="FOLDER_NAME" value="" />
       <option name="TEST_TYPE" value="TEST_METHOD" />
       <option name="PATTERN" value="" />
@@ -467,23 +466,26 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in test" />
-      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in binary_tree_test" />
-      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in linked_list_test" />
-      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in hash_table_test" />
-      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_delete" />
+      <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_delete" />
+      <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_insert" />
+      <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_delete_mid" />
+      <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in TestBinarySearchTree" />
+      <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestBinarySearchTree.test_multi_insert_count" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_delete" />
-        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittests in linked_list_test" />
-        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittests in binary_tree_test" />
-        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittests in hash_table_test" />
-        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittests in test" />
+        <item index="0" class="java.lang.String" itemvalue="Python tests.Unittests in TestBinarySearchTree" />
+        <item index="1" class="java.lang.String" itemvalue="Python tests.Unittest TestBinarySearchTree.test_multi_insert_count" />
+        <item index="2" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_delete_mid" />
+        <item index="3" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_delete" />
+        <item index="4" class="java.lang.String" itemvalue="Python tests.Unittest TestLinkedList.test_insert" />
       </list>
     </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b157abfe-8aae-4d2f-ac96-6e05d716ebe5" name="Default" comment="" />
@@ -494,42 +496,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 28m 49s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 39m 20s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 30m 07s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 39m 33s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 30m 20s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 44m 38s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 32m 12s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 44m 49s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 32m 29s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 45m 02s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 32m 41s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 45m 09s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 32m 56s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 46m 20s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 33m 03s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 46m 28s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 33m 16s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 46m 37s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittest_TestLinkedList_test_delete - 2017.03.23 at 16h 33m 49s.xml">
-      <configuration name="Unittest TestLinkedList.test_delete" configurationId="tests" />
+    <history-entry file="Unittests_in_TestBinarySearchTree - 2017.03.23 at 19h 46m 46s.xml">
+      <configuration name="Unittests in TestBinarySearchTree" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -547,6 +549,25 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29262394" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39903265" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -635,24 +656,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/binary_tree_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="21" selection-start-line="25" selection-start-column="21" selection-end-line="25" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326226">
-          <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/hash_table_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -663,13 +666,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/linked_list_test.py">
+    <entry file="file://$PROJECT_DIR$/cap1/hash_table_chaining.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.15018773">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -681,10 +682,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cap1/binary_tree.py">
+    <entry file="file://$PROJECT_DIR$/test/linked_list_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cap1/linked_list.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="73" column="21" selection-start-line="73" selection-start-column="21" selection-end-line="73" selection-end-column="21" />
           <folding />
         </state>
       </provider>
@@ -697,19 +708,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cap1/hash_table_chaining.py">
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/unittest/case.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.33213645">
+          <caret line="509" column="8" selection-start-line="509" selection-start-column="8" selection-end-line="509" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cap1/linked_list.py">
+    <entry file="file://$PROJECT_DIR$/cap1/binary_tree.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83482945">
-          <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="42" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="42" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/binary_tree_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.75763017">
+          <caret line="38" column="17" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

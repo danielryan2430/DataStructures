@@ -6,8 +6,8 @@ class TestBinarySearchTree(unittest.TestCase):
     def test_insert(self):
         bst = BinarySearchTree()
         bst.insert(5)
-        self.assertEqual(bst.lookup(5).value, 5)
-        self.assertEqual(bst.lookup(4), None)
+        self.assertEqual(bst.lookup(5), 1)
+        self.assertEqual(bst.lookup(4), -1)
 
     def test_multi_insert(self):
         bst = BinarySearchTree()
@@ -36,6 +36,7 @@ class TestBinarySearchTree(unittest.TestCase):
         bst = BinarySearchTree()
         bst.insert('b')
         bst.insert('a')
-        bst.delete('b')
-        self.assertEqual(bst.lookup('b'), None)
-        self.assertEqual(bst.lookup('a').value, 'a')
+        a = bst.delete('b')
+        self.assertEqual(bst.lookup('b'), -1)
+        self.assertEqual(bst.lookup('a'), 1)
+        self.assertEqual(a, 1)
