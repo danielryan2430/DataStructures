@@ -39,7 +39,6 @@ path = 'cap1/data.txt'
 f = open(path, 'r')
 lines = [next(f) for x in range(100)]
 b = BigOAnalyzer(ds)
-
 b.test_insert(lines)
 b.test_lookup(lines)
 lines = list(reversed(lines))
