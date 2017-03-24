@@ -1,4 +1,4 @@
-class HashTable():
+class HashTable(object):
     def __init__(self, capacity=1001):
         self.capacity = capacity
         self.size = 0

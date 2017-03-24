@@ -1,4 +1,4 @@
-class BinaryTreeNode():
+class BinaryTreeNode(object):
     def __init__(self, value):
         self._left = None
         self._right = None
@@ -34,7 +34,7 @@ def _remove_from_parent(node):
             node.parent.left = None
 
 
-class BinarySearchTree():
+class BinarySearchTree(object):
     def __init__(self):
         self.root = None
 

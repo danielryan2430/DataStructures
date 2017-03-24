@@ -7,6 +7,7 @@ This hashtable h
 
 """
 
+
 class HashTableChaining(object):
     def __init__(self, capacity=1001):
         self.capacity = capacity
