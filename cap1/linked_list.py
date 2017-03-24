@@ -1,3 +1,6 @@
+from data_structure import DataStructureBase
+
+
 class LinkedListNode(object):
     def __init__(self, value):
         self._next = None
@@ -20,7 +23,7 @@ class LinkedListNode(object):
         self._next = value
 
 
-class LinkedListStepCounter(object):
+class LinkedListStepCounter(DataStructureBase):
     def __init__(self):
         self._head = None
         self._last = None

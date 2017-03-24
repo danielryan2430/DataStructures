@@ -1,6 +1,5 @@
-from linked_list import LinkedListStepCounter,LinkedListNode
-
-
+from linked_list import LinkedListStepCounter
+from data_structure import DataStructureBase
 
 """
 This hashtable h
@@ -8,16 +7,16 @@ This hashtable h
 """
 
 
-class HashTableChaining(object):
+class HashTableChainingStepCounter(DataStructureBase):
     def __init__(self, capacity=1001):
         self.capacity = capacity
         self.size = 0
         self.data = [LinkedListStepCounter() for _ in range(capacity)]
 
     '''
-
     In order to make chaining significantly more likely, this table's hashing function is purposely high on collisions
     '''
+
     def _hash(self, key):
         return sum(bytearray(key)) % self.capacity
 
@@ -27,16 +26,16 @@ class HashTableChaining(object):
 
     def lookup(self, key):
         hash_key = self._hash(key)
-        ans = self.data[hash_key].lookup(key)
-        if ans != -1:
-            return ans + 1
+        chain_steps = self.data[hash_key].lookup(key)
+        if chain_steps != -1:
+            return chain_steps + 1
         else:
             return -1
 
     def delete(self,key):
         hash_key = self._hash(key)
-        ans = self.data[hash_key].delete(key)
-        if ans != -1:
-            return ans + 1
+        chain_steps = self.data[hash_key].delete(key)
+        if chain_steps != -1:
+            return chain_steps + 1
         else:
             return -1

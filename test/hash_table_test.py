@@ -1,6 +1,6 @@
 import unittest
 from cap1.hash_table import HashTable
-from cap1.hash_table_chaining import HashTableChaining
+from cap1.hash_table_chaining import HashTableChainingStepCounter
 
 
 class TestHashTable(unittest.TestCase):
@@ -25,7 +25,7 @@ class TestHashTable(unittest.TestCase):
 
 class TestHashTableWithChaining(unittest.TestCase):
     def test_insert(self):
-        ht = HashTableChaining()
+        ht = HashTableChainingStepCounter()
         keys = ['a', 'b', 'c', 'd', 'e', 'f']
         for i in keys:
             ht.insert(i)
@@ -35,7 +35,7 @@ class TestHashTableWithChaining(unittest.TestCase):
         self.assertEqual(ht.lookup('h'), -1)
 
     def test_delete(self):
-        ht = HashTableChaining()
+        ht = HashTableChainingStepCounter()
         keys = ['a', 'b', 'c', 'd', 'e', 'f']
         for i in keys:
             ht.insert(i)
@@ -45,7 +45,7 @@ class TestHashTableWithChaining(unittest.TestCase):
         self.assertEqual(ht.lookup('c'), -1)
 
     def test_with_collisions(self):
-        ht = HashTableChaining(capacity=1)
+        ht = HashTableChainingStepCounter(capacity=1)
         keys = ['a', 'b', 'c', 'd', 'e', 'f']
         for i in keys:
             ht.insert(i)

@@ -1,3 +1,5 @@
+from data_structure import DataStructureBase
+
 class BinaryTreeNode(object):
     def __init__(self, value):
         self._left = None
@@ -38,7 +40,7 @@ def _remove_from_parent(node):
             node.parent.left = None
 
 
-class BSTStepCounter(object):
+class BSTStepCounter(DataStructureBase):
     def __init__(self):
         self.root = None
 
@@ -47,7 +49,7 @@ class BSTStepCounter(object):
     :arguments
         - value (String)
     :returns
-        - int
+        - int (num steps to insert)
 
     inserts value into BST, duplicates will be discarded
     '''
@@ -65,7 +67,7 @@ class BSTStepCounter(object):
         - node (BinaryTreeNode)
         - node_to_insert (BinaryTreeNode)
     :returns
-        - int
+        - int (num steps to insert)
     '''
 
     def _insert(self, node, node_to_insert, count_so_far):
@@ -93,7 +95,7 @@ class BSTStepCounter(object):
         - node (BinaryTreeNode)
         - value (Any)
     :returns
-        - int
+        - int (num steps to lookup)
 
     used to recursively find BST node
     '''
@@ -113,7 +115,7 @@ class BSTStepCounter(object):
     :arguments
         - value (Any)
     :returns
-        - int
+        - int (num steps to delete)
     used to delete a node in the binary tree
     '''
 
@@ -153,7 +155,7 @@ class BSTStepCounter(object):
     :arguments
         - node (BinaryTreeNode)
     :returns
-        - int
+        - int (num steps to find min)
 
     used to find successor in delete function
     '''
