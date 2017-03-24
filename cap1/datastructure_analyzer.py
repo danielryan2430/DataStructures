@@ -25,19 +25,22 @@ class BigOAnalyzer(object):
             avg = avg + curr
         avg /= num_lines
 
-        print "for inputting {} lines the average was {} and the max steps was {}".format(num_lines, max_steps, avg)
+        print "for inputting {} lines the average was {} and the max steps was {}".format(num_lines, avg, max_steps)
 
     def test_lookup(self, lines):
         num_lines = len(lines)
         max_steps = 0
         avg = 0.0
         for l in lines:
+            self.data_structure.insert(l)
+
+        for l in lines:
             curr = self.data_structure.lookup(l)
             max_steps = max(max_steps, curr)
             avg = avg + curr
         avg /= num_lines
 
-        print "for deleting {} lines the average was {} and the max steps was {}".format(num_lines, max_steps, avg)
+        print "for lookup {} lines the average was {} and the max steps was {}".format(num_lines, avg, max_steps)
 
     def test_delete(self, path, num_lines):
         f = open(path, 'r')
@@ -50,4 +53,4 @@ class BigOAnalyzer(object):
             avg = avg + curr
 
         avg /= num_lines
-        print "for {} lines the average was {} and the max steps was {}".format(num_lines, max_steps, avg)
+        print "for {} lines the average was {} and the max steps was {}".format(num_lines, avg, max_steps)
