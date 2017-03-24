@@ -1,16 +1,16 @@
 import unittest
-from cap1.binary_tree import BinaryTreeNode, BinarySearchTree
+from cap1.binary_tree import BinaryTreeNode, BSTStepCounter
 
 
-class TestBinarySearchTree(unittest.TestCase):
+class TestBSTStepCounter(unittest.TestCase):
     def test_insert(self):
-        bst = BinarySearchTree()
+        bst = BSTStepCounter()
         bst.insert(5)
         self.assertEqual(bst.lookup(5), 1)
         self.assertEqual(bst.lookup(4), -1)
 
     def test_multi_insert(self):
-        bst = BinarySearchTree()
+        bst = BSTStepCounter()
         keys = ['b', 'a', 'd', 'c']
         for i in keys:
             bst.insert(i)
@@ -21,7 +21,7 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(a.right.left.value, 'c')
 
     def test_multi_insert_count(self):
-        bst = BinarySearchTree()
+        bst = BSTStepCounter()
         keys = ['b', 'a', 'd', 'c']
         counts = [bst.insert(i) for i in keys]
         count_dict = dict(zip(keys, counts))
@@ -30,10 +30,8 @@ class TestBinarySearchTree(unittest.TestCase):
         self.assertEqual(count_dict['d'], 2)
         self.assertEqual(count_dict['c'], 3)
 
-
-
     def test_delete(self):
-        bst = BinarySearchTree()
+        bst = BSTStepCounter()
         bst.insert('b')
         bst.insert('a')
         a = bst.delete('b')

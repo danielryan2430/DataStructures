@@ -38,7 +38,7 @@ def _remove_from_parent(node):
             node.parent.left = None
 
 
-class BinarySearchTree(object):
+class BSTStepCounter(object):
     def __init__(self):
         self.root = None
 
@@ -47,7 +47,7 @@ class BinarySearchTree(object):
     :arguments
         - value (String)
     :returns
-        - None
+        - int
 
     inserts value into BST, duplicates will be discarded
     '''
@@ -65,7 +65,7 @@ class BinarySearchTree(object):
         - node (BinaryTreeNode)
         - node_to_insert (BinaryTreeNode)
     :returns
-        - None
+        - int
     '''
 
     def _insert(self, node, node_to_insert, count_so_far):
@@ -93,7 +93,7 @@ class BinarySearchTree(object):
         - node (BinaryTreeNode)
         - value (Any)
     :returns
-        - BinaryTreeNode
+        - int
 
     used to recursively find BST node
     '''
@@ -113,7 +113,7 @@ class BinarySearchTree(object):
     :arguments
         - value (Any)
     :returns
-        - None
+        - int
     used to delete a node in the binary tree
     '''
 
@@ -153,16 +153,16 @@ class BinarySearchTree(object):
     :arguments
         - node (BinaryTreeNode)
     :returns
-        - BinaryTreeNode
+        - int
 
     used to find successor in delete function
     '''
 
     def _find_min(self, node):
-        return self._find_min(node, 0)
+        return self._find_min_with_count(node, 0)
 
-    def _find_min(self, node, count):
+    def _find_min_with_count(self, node, count):
         if node and node.left:
-            return self._find_min(node, count + 1)
+            return self._find_min_with_count(node, count + 1)
         else:
             return [node, count]

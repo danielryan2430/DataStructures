@@ -6,7 +6,7 @@ from cap1.hash_table_chaining import HashTableChaining
 class TestHashTable(unittest.TestCase):
     def test_insert(self):
         ht = HashTable()
-        ht.insert("5","hello")
+        ht.insert("5", "hello")
         self.assertEqual(ht.lookup("5"), "hello")
         self.assertEqual(ht.lookup(4), None)
 
@@ -26,16 +26,27 @@ class TestHashTable(unittest.TestCase):
 class TestHashTableWithChaining(unittest.TestCase):
     def test_insert(self):
         ht = HashTableChaining()
-        ht.insert("hello")
-        self.assertEqual(ht.lookup("hello"), "hello")
-        self.assertEqual(ht.lookup(4), None)
+        keys = ['a', 'b', 'c', 'd', 'e', 'f']
+        for i in keys:
+            ht.insert(i)
+        a = ht.insert('a')
+        self.assertEqual(a, 2)
+        self.assertEqual(ht.lookup('a'), 2)
+        self.assertEqual(ht.lookup('h'), -1)
 
     def test_delete(self):
         ht = HashTableChaining()
-        ht.insert("hello")
-        ht.insert("goodbye")
-        self.assertEqual(ht.lookup("goodbye"), "goodbye")
-        ht.delete("goodbye")
+        keys = ['a', 'b', 'c', 'd', 'e', 'f']
+        for i in keys:
+            ht.insert(i)
+        ht.delete('c')
+        self.assertEqual(ht.lookup('b'), 2)
+        self.assertEqual(ht.lookup('a'), 2)
+        self.assertEqual(ht.lookup('c'), -1)
 
-        self.assertEqual(ht.lookup("hello"), "hello")
-        self.assertEqual(ht.lookup("goodbye"), None)
+    def test_with_collisions(self):
+        ht = HashTableChaining(capacity=1)
+        keys = ['a', 'b', 'c', 'd', 'e', 'f']
+        for i in keys:
+            ht.insert(i)
+        self.assertEqual(ht.lookup('f'), 7)

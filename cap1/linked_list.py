@@ -39,6 +39,7 @@ class LinkedListStepCounter(object):
         else:
             self._last.next = node
             self._last = node
+        return 1
 
     def lookup(self, value):
         current = self._head
