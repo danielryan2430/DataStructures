@@ -1,4 +1,4 @@
-from linked_list import LinkedList,LinkedListNode
+from linked_list import LinkedListStepCounter,LinkedListNode
 
 
 
@@ -12,7 +12,7 @@ class HashTableChaining(object):
     def __init__(self, capacity=1001):
         self.capacity = capacity
         self.size = 0
-        self.data = [LinkedList() for _ in range(capacity)]
+        self.data = [LinkedListStepCounter() for _ in range(capacity)]
 
     '''
 

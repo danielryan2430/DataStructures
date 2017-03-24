@@ -20,7 +20,7 @@ class LinkedListNode(object):
         self._next = value
 
 
-class LinkedList(object):
+class LinkedListStepCounter(object):
     def __init__(self):
         self._head = None
         self._last = None
@@ -42,23 +42,33 @@ class LinkedList(object):
 
     def lookup(self, value):
         current = self._head
+        i = 1
         while current:
             if current.value == value:
-                return current
+                return i
             current = current.next
-        return None
+            i += 1
+        return -1
 
     def delete(self, value):
         prev = None
         current = self._head
+        found = False
+        i = 1
         while current:
             if current.value == value:
+                found = True
                 break
             prev = current
             current = current.next
+            i += 1
 
         # if there is no previous, then we're at the head of the list
-        if prev:
-            prev.next = current.next
+        if found:
+            if prev:
+                prev.next = current.next
+            else:
+                self._head = current.next
+            return i
         else:
-            self._head = current.next
+            return -1
