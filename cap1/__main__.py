@@ -18,7 +18,7 @@ parser.add_argument('--worst-case', default=False, help='whether to specifically
 def to_csv_line(otype, ftype, atype, input):
     a = [otype, ftype,atype]
     a.extend(input)
-    return ',\t'.join(str(e) for e in a)
+    return '\t'.join(str(e) for e in a)
 
 
 def print_list(otype, ftype, ans):
@@ -31,6 +31,7 @@ def print_list(otype, ftype, ans):
     print to_csv_line(otype, ftype, 'max', max_val)
 
 args = parser.parse_args()
+
 
 def find_ds(ds_input):
     if ds_input == 1:
@@ -61,9 +62,11 @@ for x in range(900):
 if args.worst_case:
     lines = sorted(lines)
 
-i = 100
+i = 25
 res_list = []
+num_lines = []
 while i <= 800:
+    num_lines.append(i)
     ds = find_ds(int(ds_num))
     curr_lines = lines[:i]
     b = BigOAnalyzer(ds)
@@ -71,9 +74,10 @@ while i <= 800:
     i *= 2
     f.close()
 
+print to_csv_line(ds.name, 'lines', '', num_lines)
 print_list(ds.name, 'insert', res_list)
 
-i = 100
+i = 25
 res_list = []
 
 
@@ -83,11 +87,15 @@ while i <= 800:
     for x in lines:
         ds.insert(x)
     b = BigOAnalyzer(ds)
+    if args.worst_case:
+        curr_lines = list(reversed(curr_lines))
     res_list.append(b.test_lookup(curr_lines))
     i *= 2
 
+print ""
+print to_csv_line(ds.name, 'lines', '', num_lines)
 print_list(ds.name, 'lookup', res_list)
-i = 100
+i = 25
 res_list = []
 
 while i <= 800:
@@ -99,4 +107,7 @@ while i <= 800:
     curr_lines = list(reversed(curr_lines))
     res_list.append(b.test_lookup(curr_lines))
     i *= 2
+
+print ""
+print to_csv_line(ds.name, 'lines', '', num_lines)
 print_list(ds.name, 'delete', res_list)

@@ -24,6 +24,10 @@ class LinkedListNode(object):
 
 
 class LinkedListStepCounter(DataStructureBase):
+    @property
+    def name(self):
+        return 'linked_list'
+
     def __init__(self):
         self._head = None
         self._last = None
@@ -53,8 +57,7 @@ class LinkedListStepCounter(DataStructureBase):
             self._last = node
         return 1
 
-    def name(self):
-        return 'linked_list'
+
 
     def lookup(self, value):
         current = self._head
