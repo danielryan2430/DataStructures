@@ -10,6 +10,8 @@ This project is meant to show the min, average and maximum possible time for a s
 |-\-worst-case| defaults to false, will create absolute worst-case scenario for data structure|
 # Running
 `python cap1 --data-structure 3`
+
+This command will give you a result in TSV format that will be easily ported to excel or any other tsv editor for analysis and visualization
 ```
 hash_table_with_chaining	lines		25	50	100	200	400	800
 hash_table_with_chaining	insert	min	2	2	2	2	2	2
