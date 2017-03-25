@@ -51,7 +51,8 @@ class BigOAnalyzer(object):
         for l in lines:
             curr = self.data_structure.delete(l)
             max_steps = max(max_steps, curr)
-            avg = avg + curr
+            if curr > 0:
+                avg = avg + curr
 
         avg /= num_lines
         print "for deleting {} lines the average was {} and the max steps was {}".format(num_lines, avg, max_steps)

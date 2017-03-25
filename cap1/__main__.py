@@ -37,7 +37,11 @@ ds = find_ds(int(ds_num))
 
 path = 'cap1/data.txt'
 f = open(path, 'r')
-lines = [next(f) for x in range(100)]
+lines = []
+for x in range (100):
+    lines.append(f.readline())
+
+list.sort(lines)
 b = BigOAnalyzer(ds)
 b.test_insert(lines)
 b.test_lookup(lines)

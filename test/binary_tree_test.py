@@ -37,4 +37,4 @@ class TestBSTStepCounter(unittest.TestCase):
         a = bst.delete('b')
         self.assertEqual(bst.lookup('b'), -1)
         self.assertEqual(bst.lookup('a'), 1)
-        self.assertEqual(a, 2)
+        self.assertEqual(a, 3)

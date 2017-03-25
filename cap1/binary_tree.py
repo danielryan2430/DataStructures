@@ -77,14 +77,14 @@ class BSTStepCounter(DataStructureBase):
                 return self._insert(node.left, node_to_insert, count_so_far + 1)
             else:
                 node.left = node_to_insert
-                node_to_insert.parent = node.left
+                node_to_insert.parent = node
                 return count_so_far
         elif node_to_insert.value > node.value:
             if node.right:
                 return self._insert(node.right, node_to_insert, count_so_far + 1)
             else:
                 node.right = node_to_insert
-                node_to_insert.parent = node.right
+                node_to_insert.parent = node
                 return count_so_far
 
     def lookup(self, value):
@@ -123,7 +123,7 @@ class BSTStepCounter(DataStructureBase):
     '''
 
     def delete(self, value):
-        return self._delete(self.root,value, 1)
+        return self._delete(self.root, value, 1)
 
     '''
     _delete:
@@ -137,15 +137,21 @@ class BSTStepCounter(DataStructureBase):
     def _delete(self, node, value, count):
         if not node:
             return -1
-        if value < node.value:
-            return self._delete(node.left, value, count + 1)
-        elif value > node.value:
-            return self._delete(node.right, value, count + 1)
-        else:
-            if node:
-                return self._delete_node(node, count)
+        curr = node
+        while curr:
+            if value < curr.value:
+                curr = curr.left
+                count += 1
+            elif value > curr.value:
+                curr = curr.right
+                count += 1
             else:
-                return count
+                if curr:
+                    return self._delete_node(node, count)
+                else:
+                    return count
+        print "not found"
+        return -1
 
     '''
     _delete_node:
@@ -156,22 +162,18 @@ class BSTStepCounter(DataStructureBase):
         - int (num steps to delete)
     used to delete a node in the binary tree
     '''
+
     def _delete_node(self, node_to_delete, count):
         c = count
         [successor, successor_count] = self._find_successor(node_to_delete)
+        print "successor count {}".format(successor_count)
         c += successor_count
         self._remove_successor_from_parent(successor)
 
-        if node_to_delete.parent:
-            if node_to_delete == node_to_delete.parent.left:
-                node_to_delete.parent.left = successor
-            else:
-                node_to_delete.parent.right = successor
-        else:
-            self.root = successor
-
         if successor:
-            successor.parent = node_to_delete.parent
+            node_to_delete.value = successor.value
+        else:
+            node_to_delete = None
 
         return c
 
@@ -193,7 +195,7 @@ class BSTStepCounter(DataStructureBase):
             node = node.left
         return [node, count]
 
-    def _find_successor(self,node):
+    def _find_successor(self, node):
         if node.right:
             [successor, min_count] = self._find_min(node.right)
         else:
@@ -204,7 +206,7 @@ class BSTStepCounter(DataStructureBase):
             min_count = 1
         return [successor, min_count]
 
-    def _remove_successor_from_parent(self,successor):
+    def _remove_successor_from_parent(self, successor):
         if successor:
             successor_parent = successor.parent
             if successor == successor_parent.left:
