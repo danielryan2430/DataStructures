@@ -55,7 +55,6 @@ class BSTStepCounter(DataStructureBase):
 
     inserts value into BST, duplicates will be discarded
     '''
-
     def insert(self, value):
         if not self.root:
             self.root = BinaryTreeNode(value)
@@ -109,7 +108,7 @@ class BSTStepCounter(DataStructureBase):
     _lookup:
     :arguments
         - node (BinaryTreeNode)
-        - value (Any)
+        - value (String)
     :returns
         - int (num steps to lookup)
 
@@ -134,7 +133,7 @@ class BSTStepCounter(DataStructureBase):
     '''
     delete:
     :arguments
-        - value (Any)
+        - value (String)
     :returns
         - int (num steps to delete)
     used to delete a node in the binary tree
@@ -197,7 +196,7 @@ class BSTStepCounter(DataStructureBase):
     :arguments
         - node (BinaryTreeNode)
     :returns
-        - node (
+        - node (BinaryTreeNode)
         - int (num steps to find min)
     used to find successor in delete function
     '''

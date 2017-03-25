@@ -15,6 +15,9 @@ class BigOAnalyzer(object):
     # TODO I don't like that this class is directly reading from files.
     # It should take in a list of lines and act accordingly
 
+
+
+
     def test_insert(self, lines):
         num_lines = len(lines)
         max_steps = 0

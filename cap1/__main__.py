@@ -25,7 +25,10 @@ def print_list(otype, ftype, ans):
     min_val = [l[0] for l in ans]
     avg_val = [l[1] for l in ans]
     max_val = [l[2] for l in ans]
+    num_lines = [l[3] for l in ans]
 
+    print ""
+    print to_csv_line(otype, 'lines', '', num_lines)
     print to_csv_line(otype, ftype, 'min', min_val)
     print to_csv_line(otype, ftype, 'avg', avg_val)
     print to_csv_line(otype, ftype, 'max', max_val)
@@ -58,6 +61,7 @@ f = open(path, 'r')
 lines = []
 for x in range(900):
     lines.append(f.readline())
+f.close()
 
 if args.worst_case:
     lines = sorted(lines)
@@ -72,9 +76,7 @@ while i <= 800:
     b = BigOAnalyzer(ds)
     res_list.append(b.test_insert(curr_lines))
     i *= 2
-    f.close()
 
-print to_csv_line(ds.name, 'lines', '', num_lines)
 print_list(ds.name, 'insert', res_list)
 
 i = 25
@@ -92,8 +94,7 @@ while i <= 800:
     res_list.append(b.test_lookup(curr_lines))
     i *= 2
 
-print ""
-print to_csv_line(ds.name, 'lines', '', num_lines)
+
 print_list(ds.name, 'lookup', res_list)
 i = 25
 res_list = []
@@ -108,6 +109,4 @@ while i <= 800:
     res_list.append(b.test_lookup(curr_lines))
     i *= 2
 
-print ""
-print to_csv_line(ds.name, 'lines', '', num_lines)
 print_list(ds.name, 'delete', res_list)
