@@ -40,6 +40,10 @@ class HashTableChainingStepCounter(DataStructureBase):
         else:
             return -1
 
+    @property
+    def name(self):
+        return 'hash_table_with_chaining'
+
     def delete(self, key):
         hash_key = self._hash(key)
         chain_steps = self.data[hash_key].delete(key)

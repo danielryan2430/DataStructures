@@ -53,6 +53,9 @@ class LinkedListStepCounter(DataStructureBase):
             self._last = node
         return 1
 
+    def name(self):
+        return 'linked_list'
+
     def lookup(self, value):
         current = self._head
         i = 0

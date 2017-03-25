@@ -33,6 +33,7 @@ class BinaryTreeNode(object):
         self._left = value
 
 
+
 def _remove_from_parent(node):
     if node.parent:
         if node == node.parent.right:
@@ -94,6 +95,10 @@ class BSTStepCounter(DataStructureBase):
                     node_to_insert.parent = curr
                     return count_so_far
         return -1
+
+    @property
+    def name(self):
+        return 'binary_tree'
 
     def lookup(self, value):
         if self.root and self.root.value == value:

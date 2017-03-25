@@ -11,6 +11,10 @@ class HashTable(object):
         self._data[hash_key] = value
         return 1
 
+    @property
+    def name(self):
+        return 'hash_table'
+
     def lookup(self, key):
         hash_key = self._hash(key)
         ans = self._data[hash_key]

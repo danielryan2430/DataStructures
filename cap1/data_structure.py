@@ -7,6 +7,11 @@ This class guarantees that all of my DSes have the same functions, so that I can
 
 
 class DataStructureBase(object):
+
+    @property
+    def name(self):
+        raise NotImplementedError()
+
     def insert(self, value):
         raise NotImplementedError()
 

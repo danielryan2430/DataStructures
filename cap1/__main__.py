@@ -30,6 +30,7 @@ def print_list(otype, ftype, ans):
     print to_csv_line(otype, ftype, 'avg', avg_val)
     print to_csv_line(otype, ftype, 'max', max_val)
 
+args = parser.parse_args()
 
 def find_ds(ds_input):
     if ds_input == 1:
@@ -37,7 +38,10 @@ def find_ds(ds_input):
     elif ds_input == 2:
         ds_tmp = HashTable()
     elif ds_input == 3:
-        ds_tmp = HashTableChainingStepCounter(1)
+        if args.worst_case:
+            ds_tmp = HashTableChainingStepCounter(1)
+        else:
+            ds_tmp = HashTableChainingStepCounter(100)
     elif ds_input == 4:
         ds_tmp = LinkedListStepCounter()
     else:
@@ -45,7 +49,6 @@ def find_ds(ds_input):
     return ds_tmp
 
 
-args = parser.parse_args()
 ds_num = args.data_structure
 
 path = 'cap1/data.txt'
@@ -54,6 +57,9 @@ f = open(path, 'r')
 lines = []
 for x in range(900):
     lines.append(f.readline())
+
+if args.worst_case:
+    lines = sorted(lines)
 
 i = 100
 res_list = []
@@ -65,7 +71,7 @@ while i <= 800:
     i *= 2
     f.close()
 
-print_list(type(ds).__name__, 'insert', res_list)
+print_list(ds.name, 'insert', res_list)
 
 i = 100
 res_list = []
@@ -80,7 +86,7 @@ while i <= 800:
     res_list.append(b.test_lookup(curr_lines))
     i *= 2
 
-print_list(type(ds).__name__, 'lookup', res_list)
+print_list(ds.name, 'lookup', res_list)
 i = 100
 res_list = []
 
@@ -93,4 +99,4 @@ while i <= 800:
     curr_lines = list(reversed(curr_lines))
     res_list.append(b.test_lookup(curr_lines))
     i *= 2
-print_list(type(ds).__name__, 'delete', res_list)
+print_list(ds.name, 'delete', res_list)
