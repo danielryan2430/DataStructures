@@ -58,9 +58,12 @@ class BSTStepCounter(DataStructureBase):
     def insert(self, value):
         if not self.root:
             self.root = BinaryTreeNode(value)
+            # print "returning 1"
             return 1
         else:
-            return self._insert(self.root, BinaryTreeNode(value), 2)
+            a = self._insert(self.root, BinaryTreeNode(value), 2)
+            # print "returning {}".format(a)
+            return a
 
     '''
     _insert:
@@ -72,20 +75,25 @@ class BSTStepCounter(DataStructureBase):
     '''
 
     def _insert(self, node, node_to_insert, count_so_far):
-        if node_to_insert.value < node.value:
-            if node.left:
-                return self._insert(node.left, node_to_insert, count_so_far + 1)
-            else:
-                node.left = node_to_insert
-                node_to_insert.parent = node
-                return count_so_far
-        elif node_to_insert.value > node.value:
-            if node.right:
-                return self._insert(node.right, node_to_insert, count_so_far + 1)
-            else:
-                node.right = node_to_insert
-                node_to_insert.parent = node
-                return count_so_far
+        curr = node
+        while curr:
+            if node_to_insert.value < curr.value:
+                if curr.left:
+                    curr = curr.left
+                    count_so_far +=1
+                else:
+                    curr.left = node_to_insert
+                    node_to_insert.parent = curr
+                    return count_so_far
+            elif node_to_insert.value > curr.value:
+                if curr.right:
+                    curr = curr.right
+                    count_so_far += 1
+                else:
+                    curr.right = node_to_insert
+                    node_to_insert.parent = curr
+                    return count_so_far
+        return -1
 
     def lookup(self, value):
         if self.root and self.root.value == value:
@@ -106,12 +114,16 @@ class BSTStepCounter(DataStructureBase):
     def _lookup(self, node, value, count):
         if not node:
             return -1
-        if value < node.value:
-            return self._lookup(node.left, value, count + 1)
-        elif value > node.value:
-            return self._lookup(node.right, value, count + 1)
-        else:
-            return count
+        curr = node
+        while curr:
+            if value < curr.value:
+                curr = curr.left
+                count += 1
+            elif value > curr.value:
+                curr = curr.right
+                count += 1
+            else:
+                return count
 
     '''
     delete:

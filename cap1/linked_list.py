@@ -28,6 +28,15 @@ class LinkedListStepCounter(DataStructureBase):
         self._head = None
         self._last = None
 
+    def size(self):
+        curr = self._head
+        i = 0
+        while curr:
+            i += 1
+            curr = curr.next
+        print i
+
+
     def print_all(self):
         curr = self._head
         while curr:

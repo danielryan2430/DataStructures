@@ -32,26 +32,57 @@ def find_ds(ds_input):
 args = parser.parse_args()
 print args.worst_case
 ds_num = args.data_structure
-print "ds num {}".format(ds_num)
-
 
 
 
 path = 'cap1/data.txt'
 
+f = open(path, 'r')
+lines = []
+for x in range(900):
+    lines.append(f.readline())
+
 i = 100
 while i <= 800:
-    f = open(path, 'r')
-    lines = []
-    for x in range(i):
-        lines.append(f.readline())
     ds = find_ds(int(ds_num))
+    curr_lines = []
+    for x in range(i):
+        curr_lines.append(lines[x])
+
     # list.sort(lines)
     b = BigOAnalyzer(ds)
-    b.test_insert(lines)
-    b.test_lookup(lines)
-    lines = list(reversed(lines))
-    b.test_delete(lines)
+    b.test_insert(curr_lines)
+    i *= 2
+    f.close()
+
+i = 100
+
+while i <= 800:
+    ds = find_ds(int(ds_num))
+    curr_lines = []
+    for x in range(i):
+        curr_lines.append(lines[i])
+    for x in lines:
+        ds.insert(x)
+    # list.sort(lines)
+    b = BigOAnalyzer(ds)
+    b.test_lookup(curr_lines)
+    i *= 2
+
+f.close()
+i = 100
+
+while i <= 800:
+    ds = find_ds(int(ds_num))
+    curr_lines = []
+    for x in range(i):
+        curr_lines.append(lines[x])
+    for x in curr_lines:
+        ds.insert(x)
+    # list.sort(lines)
+    b = BigOAnalyzer(ds)
+    curr_lines = list(reversed(curr_lines))
+    b.test_delete(curr_lines)
     i *= 2
 
 

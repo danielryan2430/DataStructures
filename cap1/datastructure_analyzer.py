@@ -32,9 +32,6 @@ class BigOAnalyzer(object):
         max_steps = 0
         avg = 0.0
         for l in lines:
-            self.data_structure.insert(l)
-
-        for l in lines:
             curr = self.data_structure.lookup(l)
             max_steps = max(max_steps, curr)
             avg = avg + curr
@@ -44,8 +41,6 @@ class BigOAnalyzer(object):
 
     def test_delete(self, lines):
         num_lines = len(lines)
-        for l in lines:
-            self.data_structure.insert(l)
         max_steps = 0
         avg = 0.0
         for l in lines:
