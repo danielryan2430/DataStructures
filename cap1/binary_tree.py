@@ -62,7 +62,7 @@ class BSTStepCounter(DataStructureBase):
             # print "returning 1"
             return 1
         else:
-            a = self._insert(self.root, BinaryTreeNode(value), 0)
+            a = self._insert(self.root, BinaryTreeNode(value), 2)
             # print "returning {}".format(a)
             return a
 
@@ -129,6 +129,7 @@ class BSTStepCounter(DataStructureBase):
                 count += 1
             else:
                 return count
+        return -1
 
     '''
     delete:
@@ -183,8 +184,11 @@ class BSTStepCounter(DataStructureBase):
         c = count
         [successor, successor_count] = self._find_successor(node_to_delete)
         c += successor_count
-        self._remove_successor_from_parent(successor)
-        self._replace_node_with_successor(node_to_delete, successor)
+        if node_to_delete.left and node_to_delete.right:
+            self._remove_successor_from_parent(successor)
+            node_to_delete.value = successor.value
+        else:
+            self._replace_node_with_successor(node_to_delete, successor)
 
         return c
 

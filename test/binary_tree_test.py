@@ -37,7 +37,7 @@ class TestBSTStepCounter(unittest.TestCase):
         a = bst.delete('b')
         self.assertEqual(bst.lookup('b'), -1)
         self.assertEqual(bst.lookup('a'), 1)
-        self.assertEqual(a, 3)
+        self.assertEqual(a, 2)
 
     def test_delete_two_children(self):
         bst = BSTStepCounter()

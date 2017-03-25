@@ -31,7 +31,7 @@ class TestHashTableWithChaining(unittest.TestCase):
             ht.insert(i)
         a = ht.insert('a')
         self.assertEqual(a, 2)
-        self.assertEqual(ht.lookup('a'), 2)
+        self.assertEqual(ht.lookup('a'), 1)
         self.assertEqual(ht.lookup('h'), -1)
 
     def test_delete(self):
@@ -40,8 +40,8 @@ class TestHashTableWithChaining(unittest.TestCase):
         for i in keys:
             ht.insert(i)
         ht.delete('c')
-        self.assertEqual(ht.lookup('b'), 2)
-        self.assertEqual(ht.lookup('a'), 2)
+        self.assertEqual(ht.lookup('b'), 1)
+        self.assertEqual(ht.lookup('a'), 1)
         self.assertEqual(ht.lookup('c'), -1)
 
     def test_with_collisions(self):
@@ -49,4 +49,4 @@ class TestHashTableWithChaining(unittest.TestCase):
         keys = ['a', 'b', 'c', 'd', 'e', 'f']
         for i in keys:
             ht.insert(i)
-        self.assertEqual(ht.lookup('f'), 7)
+        self.assertEqual(ht.lookup('f'), 6)
