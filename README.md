@@ -8,8 +8,20 @@ This project is meant to show the min, average and maximum possible time for a s
 |---------|------------|
 |-\-data-structure|1: binary tree, 2: HashTable with replacement, 3: Hashtable with chaining, 4: Linkedlist|
 |-\-worst-case| defaults to false, will create absolute worst-case scenario for data structure|
+
+#### Worst Case
+Certain data structures have worst-case scenarios that depend on the size and order of data.
+
+Here are the following 'worst case' optimizations that are made:
+1. Binary Search Tree: In order to create a worst-case scenario for a BST, we sort the data before insertion. This forces the BST to essentially become a linked-list, as every node will be inserted to the right.
+2. Hash Table with Chaining: In order to maximize collisions, the worst case scenario for a Hash Table with chaining is to lower its capacity to 1. This will ensure that all items are collisions, and therefore all will be placed in the 'chain' (which is essentially a LinkedList).
+
+
 # Running
-`python cap1 --data-structure 3`
+
+To run the script, simply run the cap1 package.
+
+ex: `python cap1 --data-structure 3`
 
 This command will give you a result in TSV format that will be easily ported to excel or any other tsv editor for analysis and visualization
 ```
