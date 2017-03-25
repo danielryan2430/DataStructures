@@ -16,14 +16,14 @@ parser.add_argument('--data-structure', default=0,
 parser.add_argument('--worst-case', default=False, help='whether to specifically test the worst-possible case for DS')
 
 
-def find_ds(ds_num):
-    if ds_num == 1:
+def find_ds(ds_input):
+    if ds_input == 1:
         ds_tmp = BSTStepCounter()
-    elif ds_num == 2:
+    elif ds_input == 2:
         ds_tmp = HashTable()
-    elif ds_num == 3:
+    elif ds_input == 3:
         ds_tmp = HashTableChainingStepCounter()
-    elif ds_num == 4:
+    elif ds_input == 4:
         ds_tmp = LinkedListStepCounter()
     else:
         raise Exception('invalid input')
@@ -38,10 +38,10 @@ ds = find_ds(int(ds_num))
 path = 'cap1/data.txt'
 f = open(path, 'r')
 lines = []
-for x in range (100):
+for x in range(100):
     lines.append(f.readline())
 
-list.sort(lines)
+# list.sort(lines)
 b = BigOAnalyzer(ds)
 b.test_insert(lines)
 b.test_lookup(lines)

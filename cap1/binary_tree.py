@@ -147,10 +147,9 @@ class BSTStepCounter(DataStructureBase):
                 count += 1
             else:
                 if curr:
-                    return self._delete_node(node, count)
+                    return self._delete_node(curr, count)
                 else:
                     return count
-        print "not found"
         return -1
 
     '''
@@ -166,14 +165,9 @@ class BSTStepCounter(DataStructureBase):
     def _delete_node(self, node_to_delete, count):
         c = count
         [successor, successor_count] = self._find_successor(node_to_delete)
-        print "successor count {}".format(successor_count)
         c += successor_count
         self._remove_successor_from_parent(successor)
-
-        if successor:
-            node_to_delete.value = successor.value
-        else:
-            node_to_delete = None
+        self._replace_node_with_successor(node_to_delete, successor)
 
         return c
 
@@ -214,4 +208,17 @@ class BSTStepCounter(DataStructureBase):
             else:
                 successor_parent.right = successor.right
             if successor.right:
-                successor.right.parent = successor.parent
+                successor.right.parent = successor_parent
+
+    def _replace_node_with_successor(self, node, repl):
+        if repl:
+            repl.parent = node.parent
+        if node.parent and node == node.parent.left:
+            node.parent.left = repl
+        elif node.parent and node == node.parent.right:
+            node.parent.right = repl
+        else:
+            self.root = repl
+
+
+

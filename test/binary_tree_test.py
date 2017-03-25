@@ -1,6 +1,6 @@
 import unittest
 from cap1.binary_tree import BinaryTreeNode, BSTStepCounter
-
+import random
 
 class TestBSTStepCounter(unittest.TestCase):
     def test_insert(self):
@@ -38,3 +38,39 @@ class TestBSTStepCounter(unittest.TestCase):
         self.assertEqual(bst.lookup('b'), -1)
         self.assertEqual(bst.lookup('a'), 1)
         self.assertEqual(a, 3)
+
+    def test_delete_two_children(self):
+        bst = BSTStepCounter()
+        bst.insert(5)
+        bst.insert(9)
+        bst.insert(8)
+        bst.insert(10)
+        a = bst.delete(9)
+        self.assertEqual(bst.root.value, 5)
+        self.assertEqual(bst.root.right.value, 10)
+        self.assertEqual(bst.root.right.left.value, 8)
+
+
+    def test_delete_sorted(self):
+        bst = BSTStepCounter()
+        for i in range(100):
+            bst.insert(i)
+        for i in range(100):
+            a = bst.delete(100 - i - 1)
+            self.assertEqual(a > 0, True)
+
+    def test_delete_random(self):
+        bst = BSTStepCounter()
+        l = [i for i in range(13)]
+        print l
+        for i in l:
+            bst.insert(i)
+        # random.shuffle(l)
+        j = 0
+        for i in l:
+            print "{} deleting {}".format(j,i)
+            j += 1
+            a = bst.delete(i)
+            self.assertEqual(a > 0, True)
+
+
