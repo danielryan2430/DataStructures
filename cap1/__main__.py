@@ -5,14 +5,14 @@ from hash_table_chaining import *
 from hash_table import *
 import argparse
 
-parser = argparse.ArgumentParser(description='Process some integers.')
+parser = argparse.ArgumentParser(description='Process Big O of data structures.')
 parser.add_argument('--data-structure', default=0,
                     help='which data structure to use\n'
                          '1: BST\n'
                          '2: Hastable\n'
                          '3: Hashtable with chaining\n'
                          '4: LinkedList')
-parser.add_argument('--worst-case', default=False, help='whether to specifically test the worst-possible case for DS')
+parser.add_argument('--worst-case', default=False, action='store_true', help='whether to specifically test the worst-possible case for DS')
 
 
 def to_csv_line(otype, ftype, atype, input):
