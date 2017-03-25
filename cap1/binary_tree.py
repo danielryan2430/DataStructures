@@ -61,7 +61,7 @@ class BSTStepCounter(DataStructureBase):
             # print "returning 1"
             return 1
         else:
-            a = self._insert(self.root, BinaryTreeNode(value), 2)
+            a = self._insert(self.root, BinaryTreeNode(value), 0)
             # print "returning {}".format(a)
             return a
 
@@ -98,7 +98,7 @@ class BSTStepCounter(DataStructureBase):
     def lookup(self, value):
         if self.root and self.root.value == value:
             return 1
-        return self._lookup(self.root, value, 1)
+        return self._lookup(self.root, value, 0)
 
     '''
     _lookup:

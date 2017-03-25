@@ -55,7 +55,7 @@ class LinkedListStepCounter(DataStructureBase):
 
     def lookup(self, value):
         current = self._head
-        i = 1
+        i = 0
         while current:
             if current.value == value:
                 return i
@@ -67,7 +67,7 @@ class LinkedListStepCounter(DataStructureBase):
         prev = None
         current = self._head
         found = False
-        i = 1
+        i = 0
         while current:
             if current.value == value:
                 found = True

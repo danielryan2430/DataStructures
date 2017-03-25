@@ -1,4 +1,4 @@
-
+import sys
 
 class BigOAnalyzer(object):
     def __init__(self, data_structure):
@@ -18,36 +18,40 @@ class BigOAnalyzer(object):
     def test_insert(self, lines):
         num_lines = len(lines)
         max_steps = 0
+        min_steps = sys.maxint
         avg = 0.0
         for l in lines:
             curr = self.data_structure.insert(l)
             max_steps = max(max_steps, curr)
+            min_steps = min(min_steps, curr)
             avg = avg + curr
         avg /= num_lines
-
-        print "for inputting {} lines the average was {} and the max steps was {}".format(num_lines, avg, max_steps)
+        return [min_steps, avg, max_steps, num_lines]
 
     def test_lookup(self, lines):
         num_lines = len(lines)
         max_steps = 0
+        min_steps = sys.maxint
         avg = 0.0
         for l in lines:
             curr = self.data_structure.lookup(l)
             max_steps = max(max_steps, curr)
+            min_steps = min(min_steps, curr)
             avg = avg + curr
         avg /= num_lines
-
-        print "for lookup {} lines the average was {} and the max steps was {}".format(num_lines, avg, max_steps)
+        return [min_steps, avg, max_steps, num_lines]
 
     def test_delete(self, lines):
         num_lines = len(lines)
         max_steps = 0
+        min_steps = sys.maxint
         avg = 0.0
         for l in lines:
             curr = self.data_structure.delete(l)
             max_steps = max(max_steps, curr)
+            min_steps = min(min_steps, curr)
             if curr > 0:
                 avg = avg + curr
 
         avg /= num_lines
-        print "for deleting {} lines the average was {} and the max steps was {}".format(num_lines, avg, max_steps)
+        return [min_steps, avg, max_steps, num_lines]
