@@ -33,19 +33,25 @@ args = parser.parse_args()
 print args.worst_case
 ds_num = args.data_structure
 print "ds num {}".format(ds_num)
-ds = find_ds(int(ds_num))
+
+
+
 
 path = 'cap1/data.txt'
-f = open(path, 'r')
-lines = []
-for x in range(100):
-    lines.append(f.readline())
 
-# list.sort(lines)
-b = BigOAnalyzer(ds)
-b.test_insert(lines)
-b.test_lookup(lines)
-lines = list(reversed(lines))
-b.test_delete(lines)
+i = 100
+while i <= 800:
+    f = open(path, 'r')
+    lines = []
+    for x in range(i):
+        lines.append(f.readline())
+    ds = find_ds(int(ds_num))
+    # list.sort(lines)
+    b = BigOAnalyzer(ds)
+    b.test_insert(lines)
+    b.test_lookup(lines)
+    lines = list(reversed(lines))
+    b.test_delete(lines)
+    i *= 2
 
 
