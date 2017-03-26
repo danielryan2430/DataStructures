@@ -68,7 +68,6 @@ class TestBSTStepCounter(unittest.TestCase):
         # random.shuffle(l)
         j = 0
         for i in l:
-            print "{} deleting {}".format(j,i)
             j += 1
             a = bst.delete(i)
             self.assertEqual(a > 0, True)

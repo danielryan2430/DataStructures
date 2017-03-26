@@ -46,16 +46,13 @@ class BSTStepCounter(DataStructureBase):
     def __init__(self):
         self.root = None
 
-    '''
-    _insert:
-    :arguments
-        - value (String)
-    :returns
-        - int (num steps to insert)
 
-    inserts value into BST, duplicates will be discarded
-    '''
     def insert(self, value):
+        """
+        :param value: String
+        :return: int (num steps to insert)
+        inserts value into BST, duplicates will be discarded
+        """
         if not self.root:
             self.root = BinaryTreeNode(value)
             # print "returning 1"
@@ -65,16 +62,15 @@ class BSTStepCounter(DataStructureBase):
             # print "returning {}".format(a)
             return a
 
-    '''
-    _insert:
-    :arguments
-        - node (BinaryTreeNode)
-        - node_to_insert (BinaryTreeNode)
-    :returns
-        - int (num steps to insert)
-    '''
+
 
     def _insert(self, node, node_to_insert, count_so_far):
+        """
+        :param node: BinaryTreeNode
+        :param node_to_insert: BinaryTreeNode
+        :param count_so_far: int
+        :return: int
+        """
         curr = node
         while curr:
             if node_to_insert.value < curr.value:
@@ -102,7 +98,7 @@ class BSTStepCounter(DataStructureBase):
     def lookup(self, value):
         if self.root and self.root.value == value:
             return 1
-        return self._lookup(self.root, value, 0)f
+        return self._lookup(self.root, value, 0)
 
     def _lookup(self, node, value, count):
         """
