@@ -46,9 +46,9 @@ class BSTStepCounter(DataStructureBase):
     def __init__(self):
         self.root = None
 
-
     def insert(self, value):
         """
+
         :param value: String
         :return: int (num steps to insert)
         inserts value into BST, duplicates will be discarded
@@ -62,10 +62,9 @@ class BSTStepCounter(DataStructureBase):
             # print "returning {}".format(a)
             return a
 
-
-
     def _insert(self, node, node_to_insert, count_so_far):
         """
+
         :param node: BinaryTreeNode
         :param node_to_insert: BinaryTreeNode
         :param count_so_far: int
@@ -102,6 +101,7 @@ class BSTStepCounter(DataStructureBase):
 
     def _lookup(self, node, value, count):
         """
+
         :param node: BinaryTreeNode
         :param value: String
         :param count: int
@@ -125,6 +125,7 @@ class BSTStepCounter(DataStructureBase):
 
     def delete(self, value):
         """
+
         :param value: String
         :return: int (num steps to delete)
          used to delete a node in the binary tree
@@ -134,6 +135,7 @@ class BSTStepCounter(DataStructureBase):
 
     def _delete(self, node, value, count):
         """
+
         :param node: BinaryTreeNode
         :param value: String
         :param count: int
@@ -159,6 +161,7 @@ class BSTStepCounter(DataStructureBase):
 
     def _delete_node(self, node_to_delete, count):
         """
+
         :param node_to_delete: BinaryTreeNode
         :param count: int
         :return: int
@@ -177,6 +180,7 @@ class BSTStepCounter(DataStructureBase):
 
     def _find_min(self, node):
         """
+
         :param node: (BinaryTreeNode)
         :return: [(BinaryTreeNode),int]
         used to find successor in delete function
@@ -185,6 +189,7 @@ class BSTStepCounter(DataStructureBase):
 
     def _find_min_with_count(self, node, count):
         """
+
         :param node:
         :param count:
         :return: [(BinaryTreeNode),int]

@@ -40,7 +40,6 @@ class LinkedListStepCounter(DataStructureBase):
             curr = curr.next
         print i
 
-
     def print_all(self):
         curr = self._head
         while curr:
@@ -48,6 +47,11 @@ class LinkedListStepCounter(DataStructureBase):
             curr = curr.next
 
     def insert(self, value):
+        """
+
+        :param value: string
+        :return: int (num steps to insert)
+        """
         node = LinkedListNode(value)
         if not self._head:
             self._head = node
@@ -57,9 +61,12 @@ class LinkedListStepCounter(DataStructureBase):
             self._last = node
         return 1
 
-
-
     def lookup(self, value):
+        """
+
+        :param value: string
+        :return: int (num steps to lookup)
+        """
         current = self._head
         i = 1
         while current:
@@ -70,6 +77,11 @@ class LinkedListStepCounter(DataStructureBase):
         return -1
 
     def delete(self, value):
+        """
+
+        :param value: string
+        :return: int (num steps to delete)
+        """
         prev = None
         current = self._head
         found = False
