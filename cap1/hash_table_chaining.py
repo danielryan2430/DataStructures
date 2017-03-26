@@ -21,18 +21,30 @@ class HashTableChainingStepCounter(DataStructureBase):
     def data(self, value):
         self._data = value
 
-    '''
-        In order to make chaining significantly more likely, this table's hashing function is purposely high on collisions
-    '''
-
     def _hash(self, key):
+        """
+
+        :param key: string
+        :return: int (hashed value)
+        In order to make chaining significantly more likely, this table's hashing function is purposely high on collisions
+        """
         return sum(bytearray(key)) % self._capacity
 
     def insert(self, value):
+        """
+
+        :param value: string
+        :return: int (num steps to insert)
+        """
         hash_key = self._hash(value)
         return 1 + self.data[hash_key].insert(value)
 
     def lookup(self, key):
+        """
+
+        :param key: string
+        :return: int (num steps to lookup)
+        """
         hash_key = self._hash(key)
         chain_steps = self.data[hash_key].lookup(key)
         if chain_steps != -1:
@@ -45,6 +57,11 @@ class HashTableChainingStepCounter(DataStructureBase):
         return 'hash_table_with_chaining'
 
     def delete(self, key):
+        """
+
+        :param key: string
+        :return: int (num steps to delete
+        """
         hash_key = self._hash(key)
         chain_steps = self.data[hash_key].delete(key)
         if chain_steps != -1:

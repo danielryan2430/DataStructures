@@ -37,6 +37,13 @@ class ArrayList(DataStructureBase):
         self._data.extend(new_slots)
         return count
 
+    def get(self,index):
+        """
+
+        :param index: int
+        :return:
+        """
+        return self._data[index]
 
     def insert(self, value):
         """

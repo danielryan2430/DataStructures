@@ -50,7 +50,6 @@ class TestBSTStepCounter(unittest.TestCase):
         self.assertEqual(bst.root.right.value, 10)
         self.assertEqual(bst.root.right.left.value, 8)
 
-
     def test_delete_sorted(self):
         bst = BSTStepCounter()
         for i in range(100):
