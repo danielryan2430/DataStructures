@@ -16,9 +16,11 @@ class BigOAnalyzer(object):
     # It should take in a list of lines and act accordingly
 
 
-
-
     def test_insert(self, lines):
+        """
+        :param lines:
+        :return:
+        """
         num_lines = len(lines)
         max_steps = 0
         min_steps = sys.maxint

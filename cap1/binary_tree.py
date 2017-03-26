@@ -102,20 +102,16 @@ class BSTStepCounter(DataStructureBase):
     def lookup(self, value):
         if self.root and self.root.value == value:
             return 1
-        return self._lookup(self.root, value, 0)
-
-    '''
-    _lookup:
-    :arguments
-        - node (BinaryTreeNode)
-        - value (String)
-    :returns
-        - int (num steps to lookup)
-
-    used to recursively find BST node
-    '''
+        return self._lookup(self.root, value, 0)f
 
     def _lookup(self, node, value, count):
+        """
+        :param node: BinaryTreeNode
+        :param value: String
+        :param count: int
+        :return: int (num steps to lookup
+        used to recursively find BST node
+        """
         if not node:
             return -1
         curr = node
@@ -130,28 +126,23 @@ class BSTStepCounter(DataStructureBase):
                 return count
         return -1
 
-    '''
-    delete:
-    :arguments
-        - value (String)
-    :returns
-        - int (num steps to delete)
-    used to delete a node in the binary tree
-    '''
 
     def delete(self, value):
+        """
+        :param value: String
+        :return: int (num steps to delete)
+         used to delete a node in the binary tree
+        """
         return self._delete(self.root, value, 1)
 
-    '''
-    _delete:
-    :arguments
-        - value (Any)
-    :returns
-        - int (num steps to delete)
-    used to delete a node in the binary tree
-    '''
 
     def _delete(self, node, value, count):
+        """
+        :param node: BinaryTreeNode
+        :param value: String
+        :param count: int
+        :return: int
+        """
         if not node:
             return -1
         curr = node
@@ -169,17 +160,14 @@ class BSTStepCounter(DataStructureBase):
                     return count
         return -1
 
-    '''
-    _delete_node:
-    :arguments
-        - node_to_delete (BinaryTreeNode)
-        - count (int)
-    :returns
-        - int (num steps to delete)
-    used to delete a node in the binary tree
-    '''
 
     def _delete_node(self, node_to_delete, count):
+        """
+        :param node_to_delete: BinaryTreeNode
+        :param count: int
+        :return: int
+        used to delete a node in the binary tree
+        """
         c = count
         [successor, successor_count] = self._find_successor(node_to_delete)
         c += successor_count
@@ -191,20 +179,20 @@ class BSTStepCounter(DataStructureBase):
 
         return c
 
-    '''
-    _find_min:
-    :arguments
-        - node (BinaryTreeNode)
-    :returns
-        - node (BinaryTreeNode)
-        - int (num steps to find min)
-    used to find successor in delete function
-    '''
-
     def _find_min(self, node):
+        """
+        :param node: (BinaryTreeNode)
+        :return: [(BinaryTreeNode),int]
+        used to find successor in delete function
+        """
         return self._find_min_with_count(node, 0)
 
     def _find_min_with_count(self, node, count):
+        """
+        :param node:
+        :param count:
+        :return: [(BinaryTreeNode),int]
+        """
         while node and node.left:
             node = node.left
         return [node, count]
