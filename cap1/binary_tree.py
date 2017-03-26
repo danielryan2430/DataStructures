@@ -68,7 +68,7 @@ class BSTStepCounter(DataStructureBase):
         :param node: BinaryTreeNode
         :param node_to_insert: BinaryTreeNode
         :param count_so_far: int
-        :return: int
+        :return: int (num steps to insert)
         """
         curr = node
         while curr:
@@ -192,13 +192,19 @@ class BSTStepCounter(DataStructureBase):
 
         :param node:
         :param count:
-        :return: [(BinaryTreeNode),int]
+        :return: [BinaryTreeNode,int]
         """
         while node and node.left:
             node = node.left
         return [node, count]
 
     def _find_successor(self, node):
+        """
+
+        :param node: BinaryTreeNode
+        :return: [BinaryTreeNode,int]
+        finds successor when a node is deleted
+        """
         if node.right:
             [successor, min_count] = self._find_min(node.right)
         else:
@@ -210,6 +216,12 @@ class BSTStepCounter(DataStructureBase):
         return [successor, min_count]
 
     def _remove_successor_from_parent(self, successor):
+        """
+
+        :param successor: BinaryTreeNode
+        :return: None
+        replaces successor with right child of successor
+        """
         if successor:
             successor_parent = successor.parent
             if successor == successor_parent.left:

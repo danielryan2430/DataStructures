@@ -21,16 +21,13 @@ class ArrayList(DataStructureBase):
     def size(self):
         return self._size
 
-    '''
-    increase_capacity
-    :arguments
-        - None
-    :returns
-        - int (num steps to increase capacity (or 1 if amortized))
-    when the threshold is met, this allows us to resize the arraylist
-    '''
 
     def increase_capacity(self):
+        """
+
+        :return: int (num steps to increase capacity (or 1 if amortized))
+        when the threshold is met, this allows us to resize the arraylist
+        """
         new_slots = []
         count = 0
         for i in range(self.capacity):
@@ -40,16 +37,14 @@ class ArrayList(DataStructureBase):
         self._data.extend(new_slots)
         return count
 
-    '''
-    insert
-    :arguments
-        - value(string)
-    :returns
-        - int (num steps to insert)
-    insert value
-    '''
 
     def insert(self, value):
+        """
+
+        :param value: string
+        :return: int (num steps to insert)
+        insert value
+        """
         count = 1
         if self.size % self.capacity == 0:
             count += self.increase_capacity()
@@ -57,15 +52,13 @@ class ArrayList(DataStructureBase):
         self._size += 1
         return count
 
-    '''
-    lookup
-    :arguments
-        - value(string)
-    :returns
-        - int (num steps to lookup)
-    lookup value
-    '''
     def lookup(self, value):
+        """
+
+        :param value: string
+        :return: int (num steps to lookup)
+        lookup value
+        """
         count = 1
         curr = 0
         while curr < self.size:
@@ -75,15 +68,13 @@ class ArrayList(DataStructureBase):
             curr += 1
         return -1
 
-    '''
-    delete
-    :arguments
-        - value(string)
-    :returns
-        - int (num steps to delete)
-    delete value
-    '''
     def delete(self, value):
+        """
+
+        :param value: string
+        :return: int (num steps to delete)
+        delete value
+        """
         count = 1
         curr = 0
         found = False

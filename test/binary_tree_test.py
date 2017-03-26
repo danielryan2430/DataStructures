@@ -62,7 +62,6 @@ class TestBSTStepCounter(unittest.TestCase):
     def test_delete_random(self):
         bst = BSTStepCounter()
         l = [i for i in range(13)]
-        print l
         for i in l:
             bst.insert(i)
         # random.shuffle(l)
