@@ -1,5 +1,6 @@
 from binary_tree import *
 from linked_list import *
+from skip_list import *
 from array import *
 from datastructure_analyzer import *
 from hash_table_chaining import *
@@ -52,11 +53,16 @@ def find_ds(ds_input):
         if args.worst_case:
             ds_tmp = HashTableChainingStepCounter(1)
         else:
-            ds_tmp = HashTableChainingStepCounter(100)
+            ds_tmp = HashTableChainingStepCounter(1001)
     elif ds_input == 4:
         ds_tmp = LinkedListStepCounter()
     elif ds_input == 5:
-        ds_tmp = ArrayList(10, args.amortized)
+        ds_tmp = ArrayList(100, args.amortized)
+    elif ds_input == 6:
+        if args.worst_case:
+            ds_tmp = SkipList(max_levels=0)
+        else:
+            ds_tmp = SkipList()
     else:
         raise Exception('invalid input')
     return ds_tmp
@@ -80,7 +86,6 @@ max_lines = 800
 
 
 def gather_data_for_insert():
-    global i, res_list, ds, curr_lines, b
     i = initial_lines
     res_list = []
     while i <= max_lines:
@@ -93,7 +98,6 @@ def gather_data_for_insert():
 
 
 def gather_data_for_lookup():
-    global i, res_list, ds, curr_lines, x, b
     i = initial_lines
     res_list = []
     while i <= max_lines:
@@ -112,7 +116,6 @@ def gather_data_for_lookup():
 
 
 def gather_data_for_delete():
-    global i, res_list, ds, curr_lines, x, b
     i = initial_lines
     res_list = []
     while i <= max_lines:

@@ -33,7 +33,6 @@ class BinaryTreeNode(object):
         self._left = value
 
 
-
 def _remove_from_parent(node):
     if node.parent:
         if node == node.parent.right:
