@@ -113,7 +113,9 @@ class SkipList(DataStructureBase):
         if level == self._height:
             self._add_level()
         curr_level = self._height
-        [prev, count] = self._find_prev_node_for_level(self._lists[curr_level], value)
+        count = 1
+        [prev, prev_count] = self._find_prev_node_for_level(self._lists[curr_level], value)
+        count += prev_count
         prev_inserted_node = None
         while curr_level >= 0:
             [prev, prev_count] = self._find_prev_node_for_level(prev, value)

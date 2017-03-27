@@ -42,7 +42,8 @@ class BigOAnalyzer(object):
             curr = self.data_structure.lookup(l)
             max_steps = max(max_steps, curr)
             min_steps = min(min_steps, curr)
-            avg = avg + curr
+            if curr> 0:
+                avg = avg + curr
         avg /= num_lines
         return [min_steps, avg, max_steps, num_lines]
 
