@@ -8,6 +8,7 @@ This project is meant to show the min, average and maximum possible time for a s
 |---------|------------|
 |-\-data-structure|1: binary tree, 2: HashTable with replacement, 3: Hashtable with chaining, 4: Linkedlist 5. Dynamic Array 6. Skip-list|
 |-\-worst-case| defaults to false, will create absolute worst-case scenario for data structure|
+|-\-amortized| gives result considering amortization (currently only for dynamic array)|
 
 #### Worst Case
 Certain data structures have worst-case scenarios that depend on the size and order of data.
