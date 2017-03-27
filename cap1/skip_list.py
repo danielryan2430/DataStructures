@@ -134,7 +134,7 @@ class SkipList(DataStructureBase):
         :param value: string
         :return: int
 
-        performs a skip-list lookup. Will traverse lists taking advantage of previous traversals.
+        performs a skip-list lookup. Will traverse lists taking advantage of previous level's  traversal.
         Performs in log(n) time.
         """
         curr_level = self._height
@@ -154,6 +154,14 @@ class SkipList(DataStructureBase):
         return -1
 
     def delete(self,value):
+        """
+
+        :param value: string
+        :return: int
+
+        performs a skip-list deletion. Will traverse lists taking advantage of previous level's traversal.
+        Performs in log(n) time.
+        """
         curr_level = self._height
         curr_node = self._lists[self._height]
         count = 0
