@@ -34,9 +34,14 @@ def flip_coin():
 
 
 class SkipList(DataStructureBase):
-    def delete(self, value):
-        pass
+    """
+    SkipList:
 
+    A skiplist is a probabilistic data structure that uses probabilities to maintain a sorted list that performs
+    (theta) log(n) for insert, lookup, and delete. Nodes are randomly promoted to higher "levels" to create "fast-lanes"
+    in searches. Probabilities are used since the resulting size of the data is not pre-determined.
+
+    """
     @property
     def name(self):
         return "skip_list"
@@ -48,6 +53,12 @@ class SkipList(DataStructureBase):
         self._height = 0
 
     def _find_level_for_entry(self):
+        """
+
+        :return: int
+
+        continually "flips coin" to decide what level a value should end up in.
+        """
         height = 0
         for i in range(self._height):
             if flip_coin() == 1:
@@ -61,7 +72,8 @@ class SkipList(DataStructureBase):
             self._height += 1
             self._lists.append(SkipListNode(None, down=self._lists[self._height - 1]))
 
-    def _find_prev_node_for_level(self, start, value):
+    @staticmethod
+    def _find_prev_node_for_level(start, value):
         """
 
         :param start:
@@ -79,12 +91,14 @@ class SkipList(DataStructureBase):
             count += 1
         return [curr, count]
 
-    def _insert_right(self, prev, value):
+    @staticmethod
+    def _insert_right(prev, value):
         node = SkipListNode(value)
         node.right = prev.right
         prev.right = node
 
-    def _delete_right(self, prev):
+    @staticmethod
+    def _delete_right(prev):
         prev.right = prev.right.right
 
     def insert(self, value):

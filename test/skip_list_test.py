@@ -15,7 +15,7 @@ class SkipListTest(unittest.TestCase):
         for i in range(100):
             a.insert(str(i))
         for i in range(100):
-            #all values should exist before deletion, and should not exist after deletion
+            # all values should exist before deletion, and should not exist after deletion
             self.assertEqual(a.lookup(str(i)) > 0, True)
             self.assertEqual(a.delete(str(i)) > 0, True)
             self.assertEqual(a.lookup(str(i)) > 0, False)
